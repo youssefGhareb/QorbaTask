@@ -1,0 +1,11 @@
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="../../../assets/minimalist-robot-head.webp" alt="">
+        <h3>ClickTick</h3>
+        <a routerLink="/shop">Shop</a>
+    </div>
+    <div class="nav-right">
+        <input type="text" (keydown.enter)="searchFun(search.value)" placeholder="Search for Product" #search>
+        <button (click)="logout()" class="btn-nav">Log Out</button>
+    </div>
+</nav>

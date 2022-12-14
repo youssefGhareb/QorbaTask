@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<div class="login-container">
+    <img src="../../../assets/minimalist-robot-head.webp" alt="">
+    <h1>Log in to your account</h1>
+    <p>Welcome back! Please enter you details</p>
+    <div class="form-control-login">
+        <div class="form-div">
+            <label for="">Username</label>
+            <input type="text" placeholder="Enter your username" #usernmame>
+        </div>
+        <div class="form-div">
+            <label for="">Password</label>
+            <input type="password" placeholder="Enter your password" #password>
+        </div>
+        <p class="error" *ngIf="errorMsg != ''">{{errorMsg}}</p>
+        <button class="btn" (click)="getUser(usernmame.value, password.value)">Sign In</button>
+    </div>
+</div>

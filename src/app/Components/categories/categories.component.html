@@ -1,0 +1,9 @@
+<div class="sidebar">
+    <h3>Categories</h3>
+    <ul class="m-0">
+        <li class="category form-control-radio" *ngFor="let category of categories">
+            <input type="radio" value="false" name="category" (change)="selectCategory(current.value)" value="{{category}}" #current/>
+            <label>{{ category }}</label>
+        </li>
+    </ul>
+</div>

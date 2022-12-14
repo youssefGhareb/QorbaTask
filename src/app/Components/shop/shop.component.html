@@ -1,0 +1,9 @@
+<app-navbar (search)="searchForProduct($event)"></app-navbar>
+<div class="container">
+    <div class="categories">
+        <app-categories (newCategorySelected)="changeCategory($event)" [categories]="categories"></app-categories>
+    </div>
+    <div class="products">
+        <app-products [products]="products"></app-products>
+    </div>
+</div>

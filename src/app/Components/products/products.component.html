@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col"
+        *ngFor="let product of products | paginate: {itemsPerPage: size, currentPage: page, totalItems:count}; let i index">
+        <div class="product">
+            <div class="img-cont">
+                <img src="{{product.thumbnail}}" class="img-fluid" alt="" srcset="">
+            </div>
+            <div class="product-details">
+                <h5>{{product.title}}</h5>
+                <p>{{product.description}}</p>
+                <div class="price">
+                    <span><strong>{{ product.price }}</strong> USD </span>
+                </div>
+                <div class="detail">
+                    <span>Brand: <strong>{{product.brand}}</strong></span>
+                </div>
+                <div class="detail">
+                    <span>Category: <strong>{{product.category}}</strong></span>
+                </div>
+                <div class="detail">
+                    <span>In stock: <strong>{{product.stock}}</strong></span>
+                </div>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+<pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onProductsChangeData($event)">
+
+</pagination-controls>
